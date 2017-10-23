@@ -8,7 +8,7 @@ var grow = spin;
 
 
 function preload() {
-  peacock = loadImage('Assets/Peacock2.jpg');
+  peacock = loadImage('Peacock2.jpg');
 }
 
 function setup() {
