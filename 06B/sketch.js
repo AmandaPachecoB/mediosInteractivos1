@@ -3,7 +3,7 @@ var x;
 var y;
 
 function preload() {
-  peacock = loadImage('Assets/Peacock2.jpg');
+  peacock = loadImage('Peacock2.jpg');
 }
 
 
