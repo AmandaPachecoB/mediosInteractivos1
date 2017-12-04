@@ -105,6 +105,9 @@ function draw() {
     textAlign(CENTER);
     textSize(60);
     text("Ganaste!!", width / 2, height / 2);
+    
+  }else if (estado == FINAL || estado == OUTRO){
+    estado = INTRO
 
   } else if (estado == JUEGO) {
     background(255);
