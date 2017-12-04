@@ -162,9 +162,7 @@ function draw() {
       for (var q = 0; q < numTom; q = q + 1) {
         if (dist(mono[i].x, mono[i].y, tom[q].x, tom[q].y) < 20) {
           estado = OUTRO;
-   
         }
-      
         }
       
         if (numBanFinal == numBanInicial) {
