@@ -69,7 +69,7 @@ function draw() {
     text("HUNGRY MONKEY", width / 2, height / 2);
     
       for (var u = 0; u < numBanInicial; u = u +1){
-        numBanInicial = 10;
+        numBanInicial = 20;
         numBanFinal = 0;
         ban[u].viva = true;
           ban[u].x = random(0, width);
@@ -77,6 +77,7 @@ function draw() {
           }
     for (var q = 0; q < numTom ; q =q +1){
       tom[q].viva =  true;
+      numTom = 15;
     tom[q].x = random(0, width);
     tom[q].y = random(0, height);
     }
