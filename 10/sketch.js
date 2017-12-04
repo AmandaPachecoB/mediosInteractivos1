@@ -256,7 +256,7 @@ function Tomaton() {
   this.y = random(0, height);
   this.dirX = 1;
   this.dirY = 1;
-  this.tamano = windowWidth / 15
+  this.tamano = windowWidth / 18
   this.viva = true;
 
 
