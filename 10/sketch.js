@@ -164,7 +164,8 @@ function touchEnded() {
   } else if (estado == INST) {
     estado = JUEGO;
   }
-  else if (estado == FINAL || estado == OUTRO){
+
+  else if ( estado == FINAL || estado == OUTRO){
     estado = INTRO;
   }
 
