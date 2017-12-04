@@ -10,7 +10,6 @@ var numBanFinal = 0;
 // tomate
 var tom = [];
 var numTom = 15;
-
 var estado = 0;
 
 var INTRO = 1;
@@ -68,7 +67,24 @@ function draw() {
     textAlign(CENTER);
     textSize(60);
     text("HUNGRY MONKEY", width / 2, height / 2);
-
+    
+      for (var u = 0; u < numBanInicial; u = u +1){
+        numBanInicial = 10;
+        numBanFinal = 0;
+        ban[u].viva = true;
+          ban[u].x = random(0, width);
+          ban[u].y = random(0, height);
+          }
+    for (var q = 0; q < numTom ; q =q +1){
+      tom[q].viva =  true;
+    tom[q].x = random(0, width);
+    tom[q].y = random(0, height);
+    }
+    
+    for (var i = 0; i < numMono; i = i +1){
+        mono[i].x = width / 2;
+        mono[i].y = height / 2;
+    }
 
   } else if (estado == INST) {
     tint(255, 100);
@@ -119,7 +135,7 @@ function draw() {
         if (dist(mono[j].x, mono[j].y, ban[i].x, ban[i].y) < 50) {
 
           ban[i].morir();
-          numBanFinal = numBanFinal +1;
+          numBanFinal = numBanFinal + 1;
         }
       }
     }
@@ -145,17 +161,17 @@ function draw() {
       for (var q = 0; q < numTom; q = q + 1) {
         if (dist(mono[i].x, mono[i].y, tom[q].x, tom[q].y) < 20) {
           estado = OUTRO;
-
+   
         }
+      
+        }
+      
+        if (numBanFinal == numBanInicial) {
+          estado = FINAL;
       }
     }
-
-      if (numBanFinal == numBanInicial) {
-        estado = FINAL;
-      }
   }
 }
-
 
 
 function touchEnded() {
@@ -163,9 +179,7 @@ function touchEnded() {
     estado = INST;
   } else if (estado == INST) {
     estado = JUEGO;
-  }
-
-  else if ( estado == FINAL || estado == OUTRO){
+  } else if (estado == FINAL || estado == OUTRO) {
     estado = INTRO;
   }
 
