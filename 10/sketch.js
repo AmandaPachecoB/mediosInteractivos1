@@ -9,7 +9,7 @@ var numBanFinal = 0;
 
 // tomate
 var tom = [];
-var numTom = 10;
+var numTom = 15;
 
 var estado = 0;
 
@@ -221,9 +221,9 @@ function Monito() {
     this.y = this.y + this.vely;
 
 
-    this.vely = map(rotationX, -90, 90, -8, 8);
+    this.vely = map(rotationX, -90, 90, -10, 10);
 
-    this.velx = map(rotationY, -90, 90, -8, 8);
+    this.velx = map(rotationY, -90, 90, -10, 10);
 
 
     this.x = constrain(this.x, this.tamano / 2, width - this.tamano / 2);
