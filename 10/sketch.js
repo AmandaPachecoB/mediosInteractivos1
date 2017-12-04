@@ -275,8 +275,8 @@ function Tomaton() {
 
       }
 
-      this.x = this.x + (this.dirX * random(0, 10));
-      this.y = this.y + (this.dirY * random(0, 10));
+      this.x = this.x + (this.dirX * random(0, 8));
+      this.y = this.y + (this.dirY * random(0, 8));
     }
   }
 
