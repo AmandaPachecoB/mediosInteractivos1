@@ -105,9 +105,6 @@ function draw() {
     textAlign(CENTER);
     textSize(60);
     text("Ganaste!!", width / 2, height / 2);
-    
-  }else if (estado == FINAL || estado == OUTRO){
-    estado = INTRO
 
   } else if (estado == JUEGO) {
     background(255);
@@ -166,6 +163,9 @@ function touchEnded() {
     estado = INST;
   } else if (estado == INST) {
     estado = JUEGO;
+  }
+  else if (estado == FINAL || estado == OUTRO){
+    estado = INTRO;
   }
 
   return false;
